@@ -1,0 +1,134 @@
+/* 
+
+TABLE OF CONTENTS:
+
+1. Computer Devices
+2. Phone Devices
+3. Tablets 
+
+Made by Dominik for Digital Saw.
+
+DO NOT CHANGE THIS FILE IF YOU DON'T KNOW WHAT YOU'RE DOING!!!
+
+Later you can simply do next steps:
+@include ld {
+    some code etc
+}
+@include sd {
+    some code etc
+}
+
+*/
+
+
+// Computers
+
+// larger devices
+@mixin ld {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// smaller devices
+@mixin sd {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+
+
+
+// Tables
+
+// Most tablets
+@mixin mt {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+
+
+
+// Phone Devices
+
+// Most phones
+@mixin mp {
+    @media (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+// Smaller phones
+@mixin sp {
+    @media (min-width: 320px) and (max-width: 479px) {
+        @content;
+    }
+}
+
+// iphones 6, 7 and 8
+@mixin ip678 {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// iphones 6, 7, 8 PLUS
+@mixin ip678plus {
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// iphone x, xs, 11PRO 
+@mixin ipx {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// iphone xr, 11pro
+@mixin ipxr {
+    @media only screen and (min-width: 414px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+// iphone xs, 11PRO MAX!!!!
+@mixin ipxmax {
+    @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+        @content;
+    }
+}
+
+/* Landscape */
+
+// LANDSCAPE iphones 6, 7 and 8
+@mixin ip678-ls {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+// LANDSCAPE iphones 6, 7, 8 PLUS
+@mixin ip678plus-ls {
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+// LANDSCAPE iphone x, xs, 11PRO 
+@mixin ipx-ls {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+        @content;
+    }
+}
+
+// LANDSCAPE iphone xs, 11PRO MAX!!!!
+@mixin ipxmax-ls {
+    @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+        @content;
+    }
+}

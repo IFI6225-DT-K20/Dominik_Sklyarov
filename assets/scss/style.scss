@@ -1,0 +1,16 @@
+// A file that is compiled into css later.
+
+// IMPORTED FILES
+@import "custom-bootstrap", "responsive", "variables", "custom-buttons";
+
+// basic styling removal
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    @include transition;
+    background-color: #F9F9F9;
+}

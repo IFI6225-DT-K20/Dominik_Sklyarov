@@ -1,0 +1,186 @@
+/* 
+Please don't touch this file if you don't know the $hit you're doing.
+*/
+
+/* Importing responsive here to ise it later */
+@import "responsive";
+
+/* 
+
+ Table of contents:
+    1. Colors
+    2. Fonts
+    3. Transitions
+    4. Alignments
+
+*/
+
+/* 000000000000000000000000000000000000000000000 START OF COLORS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+$titleColor: #000000;
+$textColor: #5E5E5E;
+$orange: #C1532C;
+$navGray: #151515;
+$footerBlack: #0E0E0E;
+$priceInquiry: #F0F0F0;
+
+$boxShadowLighter: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+$boxShadowDarker:0 0 10px 2px rgba(0, 0, 0, 0.3);
+/* 000000000000000000000000000000000000000000000 END OF COLORS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+/* 000000000000000000000000000000000000000000000 START OF FONTS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+/* Raleway. Used for titles, works with russian letters. */
+/* REGULAR WEIGHT, BOLD */
+$heading: 'Raleway',
+sans-serif;
+$pageTitle: 16px;
+$headingDesktop: 30px;
+$headingPhone: 25px;
+
+@mixin heading {
+    font-family: $heading;
+    color: $orange;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+    @include ld {
+        font-size: $headingDesktop !important;
+    }
+
+    @include sd {
+        font-size: $headingDesktop;
+    }
+
+    @include mt {
+        font-size: $headingDesktop;
+    }
+
+    @include mp {
+        font-size: $headingPhone;
+    }
+
+    @include sp {
+        font-size: $headingPhone;
+    }
+}
+
+%heading {
+    @include heading;
+}
+
+/* 00000000000000 NEXT FONT 00000000000000 */
+
+$letterSpacing: 1px;
+
+/* OPEN SANS. Used for other text, works with russian language. Change letter spacing to 2px. */
+/* REGULAR AND BOLD */
+$text: 'Open Sans',
+sans-serif;
+$textDesktop: 16px;
+$textPhone: 18px;
+
+@mixin regularText {
+    letter-spacing: $letterSpacing;
+    line-height: 170%;
+    font-family: $text;
+    color: $textColor;
+
+    @include ld {
+        font-size: $textDesktop !important;
+    }
+
+    @include sd {
+        font-size: $textDesktop;
+    }
+
+    @include mt {
+        font-size: $textDesktop;
+    }
+
+    @include mp {
+        font-size: $textPhone;
+    }
+
+    @include sp {
+        font-size: $textPhone;
+    }
+}
+
+%regularText {
+    @include regularText;
+}
+
+/* 000000000000000000000000000000000000000000000 END OF FONTS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+/* 000000000000000000000000000000000000000000000 START OF BUTTONS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+@mixin buttons {
+    font-family: $text;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+%buttons {
+    @include buttons;
+}
+
+/* 000000000000000000000000000000000000000000000 START OF TRANSITIONS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+/* TRANSITIONS */
+@mixin transition {
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+%transition {
+    @include transition;
+}
+
+/* 000000000000000000000000000000000000000000000 END OF TRANSITIONS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+/* 000000000000000000000000000000000000000000000 START OF ALIGNMENT 0000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+@mixin absolutelyCentered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%absolutelyCentered {
+    @include absolutelyCentered;
+}
+
+@mixin flex-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+%flex-wrap {
+    @include flex-wrap;
+}
+
+@mixin flex-nowrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+%flex-nowrap {
+    @include flex-nowrap;
+}
+
+@mixin imgBackground {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+%imgBackground {
+    @include imgBackground;
+}
