@@ -14,3 +14,11 @@ body {
     @include transition;
     background-color: #F9F9F9;
 }
+
+h1 {
+    @include heading;
+}
+
+p {
+    @include regularText;
+}

@@ -17,32 +17,35 @@ Please don't touch this file if you don't know the $hit you're doing.
 
 /* 000000000000000000000000000000000000000000000 START OF COLORS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
 
-$titleColor: #000000;
-$textColor: #5E5E5E;
-$orange: #C1532C;
-$navGray: #151515;
-$footerBlack: #0E0E0E;
-$priceInquiry: #F0F0F0;
+$textColor: black;
 
-$boxShadowLighter: 0 0 10px 2px rgba(0, 0, 0, 0.2);
-$boxShadowDarker:0 0 10px 2px rgba(0, 0, 0, 0.3);
+
 /* 000000000000000000000000000000000000000000000 END OF COLORS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
 
 /* 000000000000000000000000000000000000000000000 START OF FONTS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
 
-/* Raleway. Used for titles, works with russian letters. */
 /* REGULAR WEIGHT, BOLD */
-$heading: 'Raleway',
-sans-serif;
+
 $pageTitle: 16px;
 $headingDesktop: 30px;
 $headingPhone: 25px;
 
+@font-face {
+    font-family: "futura-pt";
+    src: url("../fonts/futura/FuturaPTBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "proxima-nova";
+    src: url("../fonts/proxima/ProximaNova-Regular.otf") format("opentype");
+}
+
+$heading: "futura-pt";
+$regularTxt: "proxima-nova";
+
 @mixin heading {
     font-family: $heading;
-    color: $orange;
     margin-bottom: 30px;
-    letter-spacing: 2px;
     font-weight: 700;
 
     @include ld {
@@ -76,15 +79,13 @@ $letterSpacing: 1px;
 
 /* OPEN SANS. Used for other text, works with russian language. Change letter spacing to 2px. */
 /* REGULAR AND BOLD */
-$text: 'Open Sans',
-sans-serif;
 $textDesktop: 16px;
 $textPhone: 18px;
 
 @mixin regularText {
     letter-spacing: $letterSpacing;
     line-height: 170%;
-    font-family: $text;
+    font-family: $regularTxt;
     color: $textColor;
 
     @include ld {
@@ -117,7 +118,7 @@ $textPhone: 18px;
 /* 000000000000000000000000000000000000000000000 START OF BUTTONS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
 
 @mixin buttons {
-    font-family: $text;
+    font-family: $regularTxt;
     font-weight: 700;
     letter-spacing: 1px;
 }

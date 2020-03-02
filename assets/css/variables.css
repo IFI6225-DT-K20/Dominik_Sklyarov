@@ -36,8 +36,17 @@ Later you can simply do next steps:
 /* 000000000000000000000000000000000000000000000 START OF COLORS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
 /* 000000000000000000000000000000000000000000000 END OF COLORS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
 /* 000000000000000000000000000000000000000000000 START OF FONTS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
-/* Raleway. Used for titles, works with russian letters. */
 /* REGULAR WEIGHT, BOLD */
+@font-face {
+  font-family: "futura-pt";
+  src: url("../fonts/futura/FuturaPTBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../fonts/proxima/ProximaNova-Regular.otf") format("opentype");
+}
+
 /* 00000000000000 NEXT FONT 00000000000000 */
 /* OPEN SANS. Used for other text, works with russian language. Change letter spacing to 2px. */
 /* REGULAR AND BOLD */
