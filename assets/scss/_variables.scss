@@ -3,7 +3,7 @@ Please don't touch this file if you don't know the $hit you're doing.
 */
 
 /* Importing responsive here to ise it later */
-@import "responsive";
+@use "responsive";
 
 /* 
 
@@ -48,23 +48,23 @@ $regularTxt: "proxima-nova";
     margin-bottom: 30px;
     font-weight: 700;
 
-    @include ld {
+    @include responsive.ld {
         font-size: $headingDesktop !important;
     }
 
-    @include sd {
+    @include responsive.sd {
         font-size: $headingDesktop;
     }
 
-    @include mt {
+    @include responsive.mt {
         font-size: $headingDesktop;
     }
 
-    @include mp {
+    @include responsive.mp {
         font-size: $headingPhone;
     }
 
-    @include sp {
+    @include responsive.sp {
         font-size: $headingPhone;
     }
 }
@@ -88,23 +88,23 @@ $textPhone: 18px;
     font-family: $regularTxt;
     color: $textColor;
 
-    @include ld {
+    @include responsive.ld {
         font-size: $textDesktop !important;
     }
 
-    @include sd {
+    @include responsive.sd {
         font-size: $textDesktop;
     }
 
-    @include mt {
+    @include responsive.mt {
         font-size: $textDesktop;
     }
 
-    @include mp {
+    @include responsive.mp {
         font-size: $textPhone;
     }
 
-    @include sp {
+    @include responsive.sp {
         font-size: $textPhone;
     }
 }
