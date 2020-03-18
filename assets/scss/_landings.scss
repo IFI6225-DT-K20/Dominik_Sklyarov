@@ -1,0 +1,52 @@
+@use "_responsive" as r;
+@use "_variables" as v;
+
+.homepage-landing {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background:
+          linear-gradient( rgba(0,0,0,.3), rgba(0,0,0,.3) ),
+          url('../../assets/images/page-img/ginja_Q+(72).jpg');
+  background-position: center center;
+  .scrolldown-container {
+    position: absolute;
+    $x: 50%;
+    $y: 98%;
+    left: $x;
+    top: $y;
+    transform: translate(-$x,-$y);
+    img {
+      width: 45px;
+      height: auto;
+    }
+  }
+  .homepage-info {
+    width: 800px;
+    position: absolute;
+    $x: 50%;
+    $y: 50%;
+    left: $x;
+    top: $y;
+    transform: translate(-$x,-$y);
+    text-align: center;
+    color: white;
+  }
+}
+
+.page-heading {
+  font-family: v.$heading;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 82px;
+  letter-spacing: .015em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.page-subtitle {
+  font-family: v.$regularTxt;
+  font-size: 18px;
+  line-height: 170%;
+  font-weight: 300;
+}

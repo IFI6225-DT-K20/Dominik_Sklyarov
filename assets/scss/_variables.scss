@@ -1,34 +1,14 @@
-/* 
-Please don't touch this file if you don't know the $hit you're doing.
-*/
+/*!
+ * Copyright (c) 2020. Dominik Sklyarov.
+ */
 
-/* Importing responsive here to ise it later */
-@use "responsive";
-
-/* 
-
- Table of contents:
-    1. Colors
-    2. Fonts
-    3. Transitions
-    4. Alignments
-
-*/
-
-/* 000000000000000000000000000000000000000000000 START OF COLORS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
-
+@use "responsive" as r;
 $textColor: black;
-
-
-/* 000000000000000000000000000000000000000000000 END OF COLORS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
-
-/* 000000000000000000000000000000000000000000000 START OF FONTS 0000000000000000000000000000000000000000000000000000000000000000000000000 */
-
-/* REGULAR WEIGHT, BOLD */
-
 $pageTitle: 16px;
 $headingDesktop: 30px;
 $headingPhone: 25px;
+$navGrey: rgb(34, 34, 34);
+
 
 @font-face {
     font-family: "futura-pt";
@@ -38,6 +18,20 @@ $headingPhone: 25px;
 @font-face {
     font-family: "proxima-nova";
     src: url("../fonts/proxima/ProximaNova-Regular.otf") format("opentype");
+    font-weight: 400;
+    //src: url("../fonts/proxima/Proxima Nova Thin.otf") format("opentype");
+    //src: url("../fonts/proxima/Proxima Nova Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "proxima-nova";
+    src: url("../fonts/proxima/Proxima Nova Thin.otf") format("opentype");
+    font-weight: 300;
+    //src: url("../fonts/proxima/Proxima Nova Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "proxima-nova";
+    src: url("../fonts/proxima/Proxima Nova Bold.otf") format("opentype");
+    font-weight: 700;
 }
 
 $heading: "futura-pt";
@@ -48,23 +42,23 @@ $regularTxt: "proxima-nova";
     margin-bottom: 30px;
     font-weight: 700;
 
-    @include responsive.ld {
+    @include r.ld {
         font-size: $headingDesktop !important;
     }
 
-    @include responsive.sd {
+    @include r.sd {
         font-size: $headingDesktop;
     }
 
-    @include responsive.mt {
+    @include r.mt {
         font-size: $headingDesktop;
     }
 
-    @include responsive.mp {
+    @include r.mp {
         font-size: $headingPhone;
     }
 
-    @include responsive.sp {
+    @include r.sp {
         font-size: $headingPhone;
     }
 }
@@ -88,23 +82,23 @@ $textPhone: 18px;
     font-family: $regularTxt;
     color: $textColor;
 
-    @include responsive.ld {
+    @include r.ld {
         font-size: $textDesktop !important;
     }
 
-    @include responsive.sd {
+    @include r.sd {
         font-size: $textDesktop;
     }
 
-    @include responsive.mt {
+    @include r.mt {
         font-size: $textDesktop;
     }
 
-    @include responsive.mp {
+    @include r.mp {
         font-size: $textPhone;
     }
 
-    @include responsive.sp {
+    @include r.sp {
         font-size: $textPhone;
     }
 }
